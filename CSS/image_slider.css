@@ -1,0 +1,80 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    /* Adjust to your preference */
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    min-width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    /* Adjust if you want fixed height */
+}
+
+.caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.nav-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.prev,
+.next {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Slightly transparent black */
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 18px;
+    color: white;
+    /* Change text color to white for visibility */
+}
+
+.indicator-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.indicator {
+    display: inline-block;
+    width: 20px;
+    /* Adjust width for rectangles */
+    height: 10px;
+    /* Adjust height for rectangles */
+    background-color: darkgray;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.indicator.active {
+    background-color: #6495ED;
+    /* Less high contrast blue */
+}
